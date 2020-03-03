@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textRestURI = new System.Windows.Forms.TextBox();
             this.textRestResponse = new System.Windows.Forms.TextBox();
             this.buttonGet = new System.Windows.Forms.Button();
             this.labelRestURI = new System.Windows.Forms.Label();
             this.labelResponse = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textRestURI
@@ -41,6 +45,7 @@
             this.textRestURI.Name = "textRestURI";
             this.textRestURI.Size = new System.Drawing.Size(369, 20);
             this.textRestURI.TabIndex = 0;
+            this.textRestURI.Text = "https://jsonplaceholder.typicode.com/todos";
             // 
             // textRestResponse
             // 
@@ -67,7 +72,7 @@
             // labelRestURI
             // 
             this.labelRestURI.AutoSize = true;
-            this.labelRestURI.Location = new System.Drawing.Point(12, 43);
+            this.labelRestURI.Location = new System.Drawing.Point(8, 43);
             this.labelRestURI.Name = "labelRestURI";
             this.labelRestURI.Size = new System.Drawing.Size(54, 13);
             this.labelRestURI.TabIndex = 3;
@@ -82,11 +87,26 @@
             this.labelResponse.TabIndex = 3;
             this.labelResponse.Text = "Response:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(426, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Enter a REST API URI.  Results from the API will be shown in the \'Response\' field" +
+    " below.";
+            // 
             // FormRestTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 217);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelResponse);
             this.Controls.Add(this.labelRestURI);
             this.Controls.Add(this.buttonGet);
@@ -94,6 +114,7 @@
             this.Controls.Add(this.textRestURI);
             this.Name = "FormRestTest";
             this.Text = "Rest Test";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,6 +127,8 @@
         private System.Windows.Forms.Button buttonGet;
         private System.Windows.Forms.Label labelRestURI;
         private System.Windows.Forms.Label labelResponse;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

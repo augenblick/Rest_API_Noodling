@@ -12,12 +12,6 @@ namespace RestTest
         [STAThread]
         static void Main()
         {
-            Debug.WriteLine("TEST");
-            TraceListenerCollection listeners = Debug.Listeners;
-            foreach (TraceListener listener in listeners) {
-                Console.WriteLine(listener.Attributes);
-            }
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormRestTest());

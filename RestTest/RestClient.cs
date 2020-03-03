@@ -26,26 +26,20 @@ namespace RestTest
 
         public async Task<string> makeRequest()
         {
-
+            if (string.IsNullOrEmpty(this.restURI))
+            {
+                throw new System.ArgumentException("Please enter a REST API URI.");
+            }
 
             string stringResponse = string.Empty;
-            try
-            {
-                // HttpClient comClient = new HttpClient();
+
                 HttpResponseMessage restResponse = await comClient.GetAsync(requestUri: restURI).ConfigureAwait(continueOnCapturedContext: false);
-                Debug.WriteLine(restResponse.Content);
+                Debug.WriteLine($"Rest Response: {restResponse.Content}");
                 restResponse.EnsureSuccessStatusCode();
                 stringResponse = await restResponse.Content.ReadAsStringAsync();
-            }
-            catch (Exception e)
-            {
-                stringResponse = $"{e.Message}{System.Environment.NewLine}{e.StackTrace}";
-            }
-            stringResponse = Regex.Replace(stringResponse, @"\r\n?|\n", System.Environment.NewLine);
-            Debug.WriteLine(stringResponse);
+                stringResponse = Regex.Replace(stringResponse, @"\r\n?|\n", System.Environment.NewLine);
+
             return stringResponse;
-
         }
-
     }
 }

@@ -1,0 +1,9 @@
+C:\Users\Nathan\source\repos\RestTest\RestTest\bin\Debug\RestTest.exe.config
+C:\Users\Nathan\source\repos\RestTest\RestTest\bin\Debug\RestTest.exe
+C:\Users\Nathan\source\repos\RestTest\RestTest\bin\Debug\RestTest.pdb
+C:\Users\Nathan\source\repos\RestTest\RestTest\obj\Debug\RestTest.csprojAssemblyReference.cache
+C:\Users\Nathan\source\repos\RestTest\RestTest\obj\Debug\RestTest.FormRestTest.resources
+C:\Users\Nathan\source\repos\RestTest\RestTest\obj\Debug\RestTest.Properties.Resources.resources
+C:\Users\Nathan\source\repos\RestTest\RestTest\obj\Debug\RestTest.csproj.GenerateResource.cache
+C:\Users\Nathan\source\repos\RestTest\RestTest\obj\Debug\RestTest.exe
+C:\Users\Nathan\source\repos\RestTest\RestTest\obj\Debug\RestTest.pdb
